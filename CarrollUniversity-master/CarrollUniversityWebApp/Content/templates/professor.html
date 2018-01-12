@@ -1,0 +1,25 @@
+﻿<div class="logIn" ng-controller="ProfessorHomeController">
+    <div class="container">
+        <div class="jumbotron">
+            <div ng-hide="hidelogin" class="ng-hide">
+                <form name="userForm" data-ng-submit="login()">
+                    UserName: <input type="text" ng-model="professor.username" />
+                    Password: <input type="password" ng-model="professor.password" />
+                    <button type="submit" class="btn btn-default">Log In </button>
+                </form>
+
+                <ul>
+                    <li><a href="#/register/professor">Register Account</a></li>
+                </ul>
+            </div>
+                <ul>
+                    <li ng-repeat="section in sections">
+                        <h4><a ng-click="showDetails = ! showDetails">{{section.Course_Name}} : {{section.Professor_Name}}</a></h4>
+                        <div class="section-details" ng-show="showDetails">
+                            <p>{{section.Section_Name}} : {{section.Time}} : {{section.Building_Name}}</p>
+                        </div>
+                    </li>
+                </ul>
+         </div>
+    </div>
+</div>

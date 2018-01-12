@@ -1,0 +1,19 @@
+﻿<div class="add" ng-controller="AddSectionController">
+    <div class="container">
+        <div class="jumbotron">
+            <form name="Section" data-ng-submit="addSection()">
+                <label for="selectCourse"> Select Course: </label>
+                <select ng-model="section.Course_Database_ID">
+                    <option ng-repeat="course in courses" value="{{course.Course_Database_ID}}">{{course.Course_Name}}</option>
+                </select>
+                <label for="selectBuilding"> Select Building: </label>
+                <select  ng-model="section.Building_ID">
+                    <option ng-repeat="building in buildings" value="{{building.Building_ID}}">{{building.Building_Name}}</option>
+                </select>
+                Section Name: <input type="text" ng-model="section.Section_Name" />
+                Time: <input type="text" ng-model="section.Time" />
+                <button type="submit" class="btn btn btn-default">Add Section</button>
+            </form>
+        </div>
+    </div>
+</div>

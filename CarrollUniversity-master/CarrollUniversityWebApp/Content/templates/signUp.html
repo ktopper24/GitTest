@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<div class="courseList" ng-controller="SignUpController">
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Sign Up for a Course</h2>
+            <div ng-hide="hideCourses" class="ng-hide">
+                <div class="courses" ng-repeat="course in courses">
+                    <div class="course" ng-click="getSections(course.Course_Database_ID)">
+                        <h3> {{course.Course_Name}} : {{course.Professor_Name}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div ng-hide="hideSections" class="ng-hide">
+                <div class="sections" ng-repeat="section in sections">
+                    <div class="course" ng-click="signUp(1,section.Section_ID)">
+                        <h3> {{section.Section_Name}} : {{section.Time}} : {{section.Building_Name}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

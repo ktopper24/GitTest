@@ -1,0 +1,15 @@
+﻿<div class="add" ng-controller="AddCourseController">
+    <div class="container">
+        <div class="jumbotron">
+            <form name="Course" data-ng-submit="addCourse()">
+                Course Name: <input type="text" ng-model="course.Course_Name" />
+                Course Catalog ID: <input type="text" ng-model="course.Course_Catalog_ID" />
+                <label for="selectProfessor"> Select Professor: </label>
+                <select ng-model="course.Professor_ID">
+                    <option ng-repeat="professor in professors" value="{{professor.Professor_ID}}">{{professor.Professor_Name}}</option>
+                </select>
+                <button type="submit" class="btn btn btn-default">Add Course</button>
+            </form>
+        </div>
+    </div>
+</div>

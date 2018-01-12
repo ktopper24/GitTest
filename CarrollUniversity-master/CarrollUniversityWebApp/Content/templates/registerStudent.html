@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<div class="registerStudent" ng-controller="RegisterStudentController">
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Register Student</h2>
+                <form name="Student" data-ng-submit="registerStudent()">
+                    First Name: <input type="text" ng-model="student.First_Name" />
+                    Last Name: <input type="text" ng-model="student.Last_Name" />
+                    Username: <input type="text" ng-model="student.User" />
+                    Password: <input type="password" ng-model="student.Password" />
+                    <button type="submit" class="btn btn btn-default">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>

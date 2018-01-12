@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "index";
+}
+<div class="title">
+    <h1>Carroll University</h1>
+    <nav class="navbar navbar-default navbar-custom">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">CU</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/professor/">Home</a></li>
+                    <li><a href="#/create/course">Create Course</a></li>
+                    <li><a href="#/create/section">Add Section</a></li>
+                    <li><a href="#/create/building">Add Building</a></li>
+                    <li><a href="#/">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+
+<body ng-app="CarrollUniversityApp">
+    <div ng-view></div>
+</body>
